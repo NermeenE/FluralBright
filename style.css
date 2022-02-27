@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300&display=swap'); /* this is from google fonts.com, just search roboto and click on the middle arrow to light 300 and then press the + sign and then from the family selected copy the @import part. then copy the bottom part that says font- family an dpaste in body*/
+* {
+  box-sizing: border-box; /* to avoid automatically adding sizing to the text field boxes in the sign in*/
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  background: #181818;
+  color: #fff;
+  overflow: hidden;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* this is to make sure any heading we used in html to also have the same font-weight*/
+  font-weight: 300;
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: row; /* meaning horizontal but its the default anyway but if you want it vertically then use flex-direction column instead of row*/
+}
+
+#left {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* to splite the page even 1:1 ratio*/
+  align-items: center; /* this is to align the left side to the center but it will still be up to, in order to center it align it vertically too then we need to add height and justfy-content*/
+  justify-content: center; /* in order to align center vertically  and need to ass the heigh*/
+  height: 100vh; /* in order to align center vertically  and need to ass the heigh*/
+}
+
+#right {
+  flex: 1; /* to splite the page even 1:1 ratio*/
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo h1 {
+  letter-spacing: 8px;
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+
+/* Sign In */
+#signin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%; /* the width of the sign in we need it to be 80% of the container page*/
+  padding-bottom: 1rem;
+}
+
+#signin form {
+  width: 80%;
+  padding-bottom: 3rem;
+}
+
+#signin .logo {
+  /* giving space between the logo and log in */
+  margin-bottom: 4vh;
+}
+
+#signin .logo img {
+  /* sizing the image*/
+  width: 60px;
+  padding-right: 10px;
+}
+
+#signin label {
+  /* username/password*/
+  font-size: 0.9rem;
+  line-height: 2rem;
+  font-weight: 500;
+}
+
+#signin .text-input {
+  margin-bottom: 1.3rem; /* bottom added spacing under the text field*/
+  width: 100%;
+  border-radius: 2px; /* to give the text field a curve at the edge of the boxes*/
+  background: #181818f8;
+  border: 1px solid #555;
+  color: #ccc;
+  padding: 0.5rem 1rem; /* 0.5 top/bottom - 1 left/right...... for the log in box text feild to be bigger*/
+  line-height: 1.3rem;
+}
+
+#signin .primary-btn {
+  /* this is to specify that you only want the sign in button to be longer not the rest of the buttons*/
+  width: 100%;
+}
+
+#signin .secondary-btn, /* to make the bottom part of the sign in size 60% of the container*/
+.or,
+.links {
+  width: 60%;
+}
+
+#signin .links a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+#signin .or {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1.2rem;
+  align-items: center;
+}
+
+#signin .or .bar {
+  flex: auto;
+  border: none;
+  height: 1px;
+  background: #aaa;
+}
+
+#signin .or span {
+  color: #ccc;
+  padding: 0 0.8rem;
+}
+
+/*   Showcase   */
+
+#showcase {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('img/login-bg.jpg') no-repeat center center / cover;
+  height: 100vh;
+  text-align: center;
+}
+
+#showcase .showcase-text {
+  font-size: 3rem;
+  width: 100%;
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+
+#showcase .showcase-text span {
+  font-weight: bolder;
+  font-size: 3.5rem;
+}
+
+#showcase .secondary-btn {
+  width: 60%;
+  margin: auto;
+}
+
+/*   Footer  */
+#main-footer {
+  color: #ccc;
+  text-align: center;
+  font-size: 0.8rem;
+  max-width: 80%;
+  padding-top: 5rem; /* to push it down abit*/
+}
+#main-footer a {
+  color: #e94057;
+  text-decoration: underline;
+}
+
+/* Button */
+.primary-btn {
+  padding: 0.7rem 1rem;
+  height: 2.7rem;
+  display: block;
+  border: 0;
+  border-radius: 2px;
+  font-weight: 500;
+  background: #8a2387;
+  background: -webkit-linear-gradient(to left, #f27121, #e94057, #8a2387);
+  background: linear-gradient(to left, #f27121, #e94057, #8a2387);
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.5s;
+  font-size: 1rem;
+  background-position: left;
+  background-size: 300%;
+  transition: 300ms background-position ease-in-out;
+}
+
+.primary-btn:hover {
+  background-position: right;
+}
+
+.secondary-btn {
+  padding: 0.7rem 1rem;
+  height: 2.7rem;
+  display: block;
+  border: 1px solid #f4f4f4;
+  border-radius: 2px;
+  font-weight: 500;
+  background: none;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.5s;
+}
+
+.secondary-btn:hover {
+  border-color: #e94057;
+  color: #e94057;
+}
+
+/* Media Queries */
+@media (min-width: 1200px) {
+  /* (min-width:1200px) - meaning if the browser is 1200px or bigger then kick these in */
+  #left {
+    flex: 4;
+  }
+
+  #right {
+    flex: 6;
+  }
+}
+
+/*  Media query for ipad size and under  */
+
+@media (max-width: 768px) {
+  body {
+    overflow: auto;
+  }
+  #right {
+    display: none;
+  }
+
+  #left {
+    justify-content: start; /* this is to push the log in page of the left up a little bit on mobile*/
+    margin-top: 4vh; /* and this will push it downa bit*/
+  }
+
+  #signin .logo {
+    /* to push the username/pass etc. closer up to the logo*/
+    margin-bottom: 2vh;
+  }
+  #signin .text-input {
+    /* to make the username  and password closer together n not much spacing*/
+    margin-bottom: 0.7rem;
+  }
+  #main-footer {
+    /* push the footer closer up, get rid of the extra spacing*/
+    padding-top: 1rem;
+  }
+}
